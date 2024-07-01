@@ -26,9 +26,7 @@ const NavOptions = () => {
             <Path d={item.icon} fill="black" />
             {item.secondIcon && <Path d={item.secondIcon} fill="black" />}
           </Svg>
-          <Text style={{ fontSize: "10px", marginTop: "2px" }}>
-            {item.title}
-          </Text>
+          <Text style={{ fontSize: 10, marginTop: 2 }}>{item.title}</Text>
         </Pressable>
       )}
     />
