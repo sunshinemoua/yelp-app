@@ -11,8 +11,8 @@ const Home = () => {
       <Text>Home</Text>
       <View>
         <Svg width="24" height="24">
-          <Path d={paths.projects} fill="black" stroke="black" />
-          <Path d={paths.testing} fill="none" stroke="black" />
+          {/* <Path d={paths.projects} fill="black" stroke="black" /> */}
+          {/* <Path d={paths.testing} fill="none" stroke="black" /> */}
         </Svg>
       </View>
       <NavOptions />

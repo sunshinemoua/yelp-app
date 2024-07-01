@@ -13,7 +13,7 @@ const NavOptions = () => {
 
   return (
     <FlatList
-      className={tw`flex flex-row items-center justify-center`}
+      className={tw`flex flex-row items-center justify-center bg-red-500`}
       data={paths}
       keyExtractor={(item) => item.id}
       horizontal
@@ -23,12 +23,12 @@ const NavOptions = () => {
           style={tw`flex flex-col items-center justify-center`}
         >
           <Svg width="24" height="24">
-            <Path d={item.icon} fill="black" />
-            {item.secondIcon && <Path d={item.secondIcon} fill="black" />}
+            <Path d={item.icon} fill="grey" />
+            {item.additionalIcon && (
+              <Path d={item.additionalIcon} fill="grey" />
+            )}
           </Svg>
-          <Text style={{ fontSize: "10px", marginTop: "2px" }}>
-            {item.title}
-          </Text>
+          <Text style={{ fontSize: 10, marginTop: 2 }}>{item.title}</Text>
         </Pressable>
       )}
     />
