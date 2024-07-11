@@ -1,18 +1,16 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { paths } from "../../icons/SVGPaths";
-import { Path, Svg } from "react-native-svg";
-import NavOptions from "../NavOptions";
+import { Svg } from "react-native-svg";
 
 const Home = () => {
   return (
     <SafeAreaView style={styles.homeWrapper}>
       <View>
-        <Text>Home</Text>
+        <Text>Home TESTING</Text>
         <Svg width="24" height="24">
-          {/* <Path d={paths.projects} fill="black" stroke="black" /> */}
-          {/* <Path d={paths.testing} fill="none" stroke="black" /> */}
+          {/* <Path d={bottomNavOptions.projects} fill="black" stroke="black" /> */}
+          {/* <Path d={bottomNavOptions.testing} fill="none" stroke="black" /> */}
         </Svg>
       </View>
       {/* <NavOptions /> */}

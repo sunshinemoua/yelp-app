@@ -2,12 +2,12 @@ import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import { Path, Svg } from "react-native-svg";
-import { paths } from "../icons/SVGPaths";
+import { bottomNavOptions } from "../icons/SVGPaths";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 const NavOptions = () => {
   const Tab = createBottomTabNavigator();
-  const tabs = paths.map((item) => (
+  const tabs = bottomNavOptions.map((item) => (
     <Tab.Screen
       key={item.id}
       name={item.title}
@@ -30,9 +30,7 @@ const NavOptions = () => {
   ));
 
   return (
-    <NavigationContainer>
-      <Tab.Navigator>{tabs}</Tab.Navigator>
-    </NavigationContainer>
+    <Tab.Navigator screenOptions={{ headerShown: false }}>{tabs}</Tab.Navigator>
   );
 };
 
