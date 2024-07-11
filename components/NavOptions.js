@@ -1,18 +1,8 @@
-import { NavigationContainer, useNavigation } from "@react-navigation/native";
+import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
-import {
-  StyleSheet,
-  FlatList,
-  Image,
-  Pressable,
-  Text,
-  View,
-} from "react-native";
-import { useSelector } from "react-redux";
+import { StyleSheet, View } from "react-native";
 import { Path, Svg } from "react-native-svg";
 import { paths } from "../icons/SVGPaths";
-import twrnc from "tailwind-react-native-classnames";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 const NavOptions = () => {
@@ -45,7 +35,5 @@ const NavOptions = () => {
     </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default NavOptions;
