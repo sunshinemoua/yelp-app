@@ -64,7 +64,7 @@ export const bottomNavOptions = [
   // },
 ];
 
-export const searchOptions = [
+export const categorySearchBarOptions = [
   {
     id: uuid.v4(),
     title: "testing",

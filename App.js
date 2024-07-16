@@ -5,8 +5,12 @@ import tw from "tailwind-react-native-classnames";
 import store from "./redux/store";
 import NavOptions from "./components/NavOptions";
 import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import CategorySearch from "./components/screens/CategorySearch";
 
 export default App = () => {
+  const Stack = createStackNavigator();
+
   return (
     <Provider store={store}>
       <SafeAreaProvider>
