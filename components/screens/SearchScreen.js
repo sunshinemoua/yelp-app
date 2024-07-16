@@ -15,9 +15,9 @@ const SearchNavOptions = () => {
       <Stack.Navigator>
         <Stack.Screen
           name="CategorySearchBar"
-          // options={{
-          //   headerShown: false,
-          // }}
+          options={{
+            headerShown: false,
+          }}
         >
           {(props) => <CategorySearchBar {...props} prop1={"hello"} />}
         </Stack.Screen>

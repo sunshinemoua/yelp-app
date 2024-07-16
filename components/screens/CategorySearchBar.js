@@ -1,14 +1,31 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { categorySearchBarOptions } from "../../icons/SVGPaths";
+import { Path, Svg } from "react-native-svg";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 const CategorySearchBar = (props) => {
   console.log(props);
+  const tabs = categorySearchBarOptions.map((item) => (
+    <TouchableOpacity
+      onPress={() =>
+        props.navigation.navigate("CategorySearch", {
+          categoryName: item.title,
+        })
+      }
+      style={styles.iconWrapper}
+    >
+      <Svg width="28" height="28" style={styles.svgWrapper}>
+        <Path d={item.icon} fill="black" />
+        {item.additionalIcon && <Path d={item.additionalIcon} fill="grey" />}
+      </Svg>
+      <Text>{item.title}</Text>
+    </TouchableOpacity>
+  ));
 
   return (
     <View style={styles.pageWrapper}>
-      <Text onPress={() => props.navigation.navigate("CategorySearch")}>
-        Category Search BAR
-      </Text>
+      <Text>{tabs}</Text>
     </View>
   );
 };
@@ -16,8 +33,18 @@ const CategorySearchBar = (props) => {
 export default CategorySearchBar;
 
 const styles = StyleSheet.create({
+  iconWrapper: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  svgWrapper: {
+    backgroundColor: "lightgrey",
+    display: "flex",
+    alignContent: "center",
+    justifyContent: "center",
+  },
   pageWrapper: {
     width: "100px",
-    backgroundColor: "red",
   },
 });
