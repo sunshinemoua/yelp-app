@@ -6,7 +6,7 @@ const CategorySearch = (props) => {
   const { categoryName } = props.route.params;
   return (
     <View>
-      <Text>CategorySearch PAGE {categoryName}</Text>
+      <Text>CategorySearch PAGE {categoryName} </Text>
     </View>
   );
 };

@@ -1,10 +1,10 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
 import { Path, Svg } from "react-native-svg";
 import { bottomNavOptions } from "../icons/SVGPaths";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-const NavOptions = () => {
+const BottomNavigation = () => {
   const Tab = createBottomTabNavigator();
   const tabs = bottomNavOptions.map((item) => (
     <Tab.Screen
@@ -33,4 +33,4 @@ const NavOptions = () => {
   );
 };
 
-export default NavOptions;
+export default BottomNavigation;

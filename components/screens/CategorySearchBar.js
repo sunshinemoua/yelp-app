@@ -1,15 +1,18 @@
-import { Button, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { categorySearchBarOptions } from "../../icons/SVGPaths";
 import { Path, Svg } from "react-native-svg";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
-const CategorySearchBar = (props) => {
-  console.log(props);
+const CategorySearchBar = () => {
+  const navigation = useNavigation();
+
   const tabs = categorySearchBarOptions.map((item) => (
     <TouchableOpacity
+      key={item.id}
       onPress={() =>
-        props.navigation.navigate("CategorySearch", {
+        navigation.navigate("CategorySearch", {
           categoryName: item.title,
         })
       }
